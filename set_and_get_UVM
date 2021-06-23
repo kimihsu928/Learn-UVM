@@ -1,0 +1,4 @@
+//top_tb.sv 將my_if傳送到uvm_test_top.i_agt.drv
+uvm_config_db#(virtual my_if)::set(null, "uvm_test_top.i_agt.drv", "vif", input_if); 
+//driver.sv 於目的地接收my_inf
+uvm_config_db#(virtual my_if)::get(this, "", "vif", vif)
